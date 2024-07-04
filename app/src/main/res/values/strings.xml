@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CommandProject</string>
+    <string name="history">History</string>
+    <string name="landmarks">Landmarks</string>
+    <string name="main">Main</string>
+    <string name="setting">Setting</string>
+</resources>
