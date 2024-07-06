@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "ru.itis.summer24.commandproject.app-mergeDebugResources-47:/layout/fragment_main.xml",
+        "source": "ru.itis.summer24.commandproject.app-main-50:/layout/fragment_main.xml"
+    },
+    {
+        "merged": "ru.itis.summer24.commandproject.app-mergeDebugResources-47:/layout/item_landmarks.xml",
+        "source": "ru.itis.summer24.commandproject.app-main-50:/layout/item_landmarks.xml"
+    },
+    {
+        "merged": "ru.itis.summer24.commandproject.app-mergeDebugResources-47:/layout/fragment_settings.xml",
+        "source": "ru.itis.summer24.commandproject.app-main-50:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "ru.itis.summer24.commandproject.app-mergeDebugResources-47:/layout/fragment_landmarks.xml",
+        "source": "ru.itis.summer24.commandproject.app-main-50:/layout/fragment_landmarks.xml"
+    },
+    {
+        "merged": "ru.itis.summer24.commandproject.app-mergeDebugResources-47:/layout/fragment_dost.xml",
+        "source": "ru.itis.summer24.commandproject.app-main-50:/layout/fragment_dost.xml"
+    },
+    {
+        "merged": "ru.itis.summer24.commandproject.app-mergeDebugResources-47:/layout/activity_fragment_main.xml",
+        "source": "ru.itis.summer24.commandproject.app-main-50:/layout/activity_fragment_main.xml"
+    },
+    {
+        "merged": "ru.itis.summer24.commandproject.app-mergeDebugResources-47:/layout/fragment_history.xml",
+        "source": "ru.itis.summer24.commandproject.app-main-50:/layout/fragment_history.xml"
+    }
+]

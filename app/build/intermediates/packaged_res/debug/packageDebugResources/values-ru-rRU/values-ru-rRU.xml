@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CommandProject</string>
+    <string name="history">История</string>
+    <string name="landmarks">Достопримечательности</string>
+    <string name="main">Главный Экран</string>
+    <string name="setting">Настройки</string>
+</resources>

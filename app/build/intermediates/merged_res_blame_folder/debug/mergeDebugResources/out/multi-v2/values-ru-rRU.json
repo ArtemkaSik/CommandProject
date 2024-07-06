@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "ru.itis.summer24.commandproject.app-mergeDebugResources-46:/values-ru-rRU/values-ru-rRU.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\user\\AndroidStudioProjects\\CommandProject\\app\\src\\main\\res\\values-ru-rRU\\strings.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "57,110,155,216,264",
+                        "endColumns": "51,43,59,46,45",
+                        "endOffsets": "104,149,210,258,305"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,107,151,211,258",
+                        "endColumns": "51,43,59,46,45",
+                        "endOffsets": "102,146,206,253,299"
+                    }
+                }
+            ]
+        }
+    ]
+}

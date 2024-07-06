@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">CommandProject</string>
+    <string name="history">History</string>
+    <string name="landmarks">Landmarks</string>
+    <string name="main">Main</string>
+    <string name="setting">Setting</string>
+    <style name="AppTitle">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="Base.Theme.CommandProject" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.CommandProject" parent="Base.Theme.CommandProject"/>
+</resources>
