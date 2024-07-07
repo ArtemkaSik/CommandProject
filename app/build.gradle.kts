@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id ("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -50,8 +51,18 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:$glideVersion")
 
     val navVersion = "2.7.7"
-    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
-    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+    implementation ("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation ("androidx.navigation:navigation-ui-ktx:$navVersion")
+
+    val roomVersion = "2.6.1"
+    implementation ("androidx.room:room-runtime:$roomVersion")
+    kapt ("androidx.room:room-compiler:$roomVersion")
+
+    val lifecycleVersion = "2.6.1"
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
