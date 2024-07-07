@@ -1,7 +1,9 @@
 package ru.itis.summer24.commandproject
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -15,6 +17,7 @@ class MainFragmentActivity : AppCompatActivity() {
     private var controller: NavController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        applySavedTheme()
         super.onCreate(savedInstanceState)
         binding = ActivityFragmentMainBinding.inflate(layoutInflater).also {
             setContentView(it.root)
@@ -26,6 +29,12 @@ class MainFragmentActivity : AppCompatActivity() {
         controller?.let { navController ->
             binding?.bottomNavigation?.setupWithNavController(navController)
         }
+    }
+
+    private fun applySavedTheme() {
+        val sharedPreferences = getSharedPreferences("AppTheme", Context.MODE_PRIVATE)
+        val savedTheme = sharedPreferences.getInt("theme", AppCompatDelegate.MODE_NIGHT_NO)
+        AppCompatDelegate.setDefaultNightMode(savedTheme)
     }
 
     override fun onBackPressed() {

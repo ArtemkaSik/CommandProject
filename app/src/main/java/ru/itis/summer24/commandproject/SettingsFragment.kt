@@ -1,5 +1,6 @@
 package ru.itis.summer24.commandproject
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatDelegate
@@ -34,6 +35,7 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
                 AppCompatDelegate.MODE_NIGHT_YES
             }
             AppCompatDelegate.setDefaultNightMode(newTheme)
+            saveCurrentTheme(newTheme)
             binding?.switchTheme?.text = if (newTheme == AppCompatDelegate.MODE_NIGHT_YES) {
                 "Dark Mode"
             } else {
@@ -44,6 +46,13 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
 
     private fun getCurrentTheme(): Int {
         return AppCompatDelegate.getDefaultNightMode()
+    }
+
+    private fun saveCurrentTheme(theme: Int) {
+        val sharedPreferences = requireContext().getSharedPreferences("AppTheme", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putInt("theme", theme)
+        editor.apply()
     }
 
     override fun onDestroyView() {
