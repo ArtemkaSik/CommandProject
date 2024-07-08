@@ -29,9 +29,10 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         binding?.run {
             back.setOnClickListener {
                 findNavController().navigate(
-                    R.id.action_detailsFragment_to_historyFragment
+                    R.id.action_detailsFragment_to_landmarksFragment
                 )
-                tvName.text = landmark.name
+
+                tvName.text = "uma"
                 tvCity.text = landmark.city
                 tvLongInformation.text = landmark.longInformation
                 Glide.with(view)

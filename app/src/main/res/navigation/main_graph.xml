@@ -46,8 +46,8 @@
         android:label="fragment_details"
         tools:layout="@layout/fragment_detail" >
     <action
-        android:id="@+id/action_detailsFragment_to_historyFragment"
-        app:destination="@id/historyFragment" />
+        android:id="@+id/action_detailsFragment_to_landmarksFragment"
+        app:destination="@id/landmarksFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
