@@ -38,7 +38,7 @@
             app:destination="@id/settingsFragment" />
         <action
             android:id="@+id/action_historyFragment_to_detailsFragment"
-            app:destination="@id/settingsFragment" />
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"

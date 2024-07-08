@@ -13,16 +13,16 @@ interface LandmarksDAO {
     @Query("""
         SELECT * FROM landmarks WHERE visit=0
     """)
-    fun getLandmarks(): List<Landmark>
+    suspend fun getLandmarks(): List<Landmark>
 
     @Query("""
         SELECT * FROM landmarks WHERE id = :landmarkId
         """)
-    fun getDetails(landmarkId: Long): Landmark
+    suspend fun getDetails(landmarkId: Long): Landmark
 
     @Query("""
         SELECT * FROM landmarks WHERE visit=1
         """)
-    fun getHistory(): List<Landmark>
+    suspend fun getHistory(): List<Landmark>
 
 }

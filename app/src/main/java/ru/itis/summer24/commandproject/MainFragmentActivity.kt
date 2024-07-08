@@ -1,5 +1,6 @@
 package ru.itis.summer24.commandproject
 
+import LandmarksRepository
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -11,7 +12,7 @@ import ru.itis.summer24.commandproject.databinding.ActivityFragmentMainBinding
 class MainFragmentActivity : AppCompatActivity() {
 
     private var binding: ActivityFragmentMainBinding? = null
-
+    lateinit var database: LandmarksRepository
     private var controller: NavController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +27,9 @@ class MainFragmentActivity : AppCompatActivity() {
         controller?.let { navController ->
             binding?.bottomNavigation?.setupWithNavController(navController)
         }
+        database = LandmarksRepository(this)
+        (supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment)
+            .navController
     }
 
     override fun onBackPressed() {

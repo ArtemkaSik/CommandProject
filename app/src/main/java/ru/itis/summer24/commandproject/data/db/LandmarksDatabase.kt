@@ -19,11 +19,4 @@ abstract class LandmarksDatabase :  RoomDatabase(){
 
     abstract fun getDao(): LandmarksDAO
 
-    companion object{
-        fun create(context: Context): LandmarksDatabase = Room
-            .databaseBuilder(context, LandmarksDatabase::class.java, "landmarksDB")
-            .createFromAsset("landmarks.db")
-            .allowMainThreadQueries()
-            .build()
-    }
 }
