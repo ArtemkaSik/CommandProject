@@ -7,7 +7,7 @@ object Landmarks {
         Landmark(
             id = 0,
             name = "Eiffel Tower",
-            imageUrl = "https://upload.wikimedia.org/wikipedia/commons/a/a8/Eiffel_Tower_Paris.jpg",
+            imageUrl = "https://u-stena.ru/upload/iblock/352/3529f0013821edca1b6bcaebb602622b.jpg",
             city = "Paris",
             shortInformation = "The Eiffel Tower is a wrought-iron lattice tower in Paris, France. It is named after Gustave Eiffel.",
             longInformation = "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Constructed in 1887–1889 as the entrance arch to the 1889 World's Fair, it has become both a global cultural icon of France and one of the most recognizable structures in the world.",
@@ -16,7 +16,7 @@ object Landmarks {
         Landmark(
             id = 1,
             name = "Taj Mahal",
-            imageUrl = "https://upload.wikimedia.org/wikipedia/commons/1/1c/Taj_Mahal_in_India_-_Kristian_Bertel.jpg",
+            imageUrl = "https://s1.1zoom.ru/big7/731/Temples_India_Taj_Mahal_469324.jpg",
             city = "Agra",
             shortInformation = "The Taj Mahal is an ivory-white marble mausoleum in Agra, India.",
             longInformation = "The Taj Mahal is an ivory-white marble mausoleum on the right bank of the Yamuna river in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal. The Taj Mahal is considered to be the jewel of Islamic art in India and one of the most universally admired masterpieces in the world's heritage.",
@@ -34,7 +34,7 @@ object Landmarks {
         Landmark(
             id = 3,
             name = "Machu Picchu",
-            imageUrl = "https://upload.wikimedia.org/wikipedia/commons/1/14/80_-_Peru_-_Machu_Picchu_-_Juin_2009_-_edit.2.jpg",
+            imageUrl = "https://mykaleidoscope.ru/x/uploads/posts/2022-10/1666389691_56-mykaleidoscope-ru-p-inki-machu-pikchu-vkontakte-64.jpg",
             city = "Cusco",
             shortInformation = "Machu Picchu is a 15th-century Inca citadel in Cusco, Peru.",
             longInformation = "Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru on a 2,430-meter mountain ridge. It is located in the Machupicchu District in Urubamba Province within the Cusco Region. Machu Picchu is probably the most familiar symbol of the Inca Empire.",
@@ -43,7 +43,7 @@ object Landmarks {
         Landmark(
             id = 4,
             name = "Pyramids of Giza",
-            imageUrl = "https://upload.wikimedia.org/wikipedia/commons/6/63/Gizeh%2C_Pyramids%2C_Egypt%2C_1904-1905%2C_Temple%2C_Antiquit%C3%A4t%2C_Altes_%C3%84gypten%2C_Travel%2C_Kunstverlag_Ernst_Wasmuth%2C_Berlin-Dahlem%2C_2013.JPG",
+            imageUrl = "https://mykaleidoscope.ru/x/uploads/posts/2022-09/1663477457_1-mykaleidoscope-ru-p-yegipetskie-piramidi-kair-dostoprimechatel-1.jpg",
             city = "Giza",
             shortInformation = "The Pyramids of Giza are ancient monuments in Giza, Egypt.",
             longInformation = "The Pyramids of Giza consist of the Great Pyramid of Giza (also known as the Pyramid of Cheops or Khufu), the Pyramid of Khafre, and the Pyramid of Menkaure, along with the Great Sphinx of Giza. These ancient structures are some of the most famous monuments of ancient Egyptian civilization.",

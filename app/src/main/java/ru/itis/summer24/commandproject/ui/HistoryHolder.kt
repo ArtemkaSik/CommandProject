@@ -8,7 +8,7 @@ import com.bumptech.glide.request.RequestOptions
 import ru.itis.summer24.commandproject.databinding.ItemLandmarkBinding
 import ru.itis.summer24.commandproject.models.Landmark
 
-class LandmarksHolder (
+class HistoryHolder (
     private val binding: ItemLandmarkBinding,
     private val glide: RequestManager,
     private val onClick: (Landmark) -> Unit,

@@ -21,8 +21,9 @@ abstract class LandmarksDatabase :  RoomDatabase(){
 
     companion object{
         fun create(context: Context): LandmarksDatabase = Room
-            .databaseBuilder(context, LandmarksDatabase::class.java, "landmarkDB")
-            .createFromAsset("landmark.db")
+            .databaseBuilder(context, LandmarksDatabase::class.java, "landmarksDB")
+            .createFromAsset("landmarks.db")
+            .allowMainThreadQueries()
             .build()
     }
 }

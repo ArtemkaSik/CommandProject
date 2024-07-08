@@ -1,57 +1,48 @@
 package ru.itis.summer24.commandproject.ui
 
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import android.view.View
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
+import com.bumptech.glide.Glide
+import androidx.recyclerview.widget.LinearLayoutManager
 import ru.itis.summer24.commandproject.R
+
 import ru.itis.summer24.commandproject.databinding.FragmentHistoryBinding
-import ru.itis.summer24.commandproject.ui.app
+import ru.itis.summer24.commandproject.models.Landmark
 
 
-class HistoryFragment : Fragment() {
+class HistoryFragment : Fragment(R.layout.fragment_history) {
+    private var binding: FragmentHistoryBinding? = null
+    private var adapter: HistoryAdapter? = null
 
-    lateinit var binding: FragmentHistoryBinding
-
-    val viewModel by lazy {
-        val factory = HistoryViewModel.Factory(app.mainModule.repository)
-        ViewModelProvider(this, factory).get(HistoryViewModel::class.java)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentHistoryBinding.inflate(inflater)
-        return binding.root
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentHistoryBinding.bind(view)
+        initAdapter()
+    }
 
-        val historyAdapter = HistoryAdapter(
-            onCardClick = {
-                findNavController().navigate(
-                    resId = R.id.action_historyFragment_to_detailsFragment,
-                    DetailFragment.createBundle(it)
-                )
-            })
+    private fun initAdapter() {
+        binding?.run {
+            adapter = HistoryAdapter(
+                list = app.mainModule.repository.getHistory(),
+                glide = Glide.with(this@HistoryFragment),
+                onClick = {
+                    findNavController().navigate(
+                        resId = R.id.action_historyFragment_to_detailsFragment,
+                        args = DetailFragment.createBundle(it.id)
+                    )
+                }
+            )
+            rvLandmarks.adapter = adapter
+            rvLandmarks.layoutManager = LinearLayoutManager(requireContext())
 
-        val gridLayout = GridLayoutManager(
-            context,
-            1,
-            GridLayoutManager.VERTICAL,
-            false
-        )
-
-        viewModel.cart.observe(viewLifecycleOwner) {
-            historyAdapter.list = it
         }
     }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding = null
+    }
+
 }

@@ -4,7 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -34,20 +40,19 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                tools:text="Письма к брату Тео" />
+                app:layout_constraintEnd_toEndOf="parent" />
 
 
             <TextView
                 android:id="@+id/tvCity"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
+                android:layout_marginHorizontal="16dp"
                 android:textColor="@color/black"
                 android:textSize="13sp"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:text="Ван Гог Винсент" />
-
+                />
 
             <TextView
                 android:id="@+id/tvLongInformation"
@@ -58,8 +63,8 @@
                 android:lineSpacingMultiplier="1.25"
                 android:textColor="@color/black"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:text="«Письма к брату Тео» – поразительный по силе и искренности человеческий документ, повествующий не только о фактах недолгой и трагической жизни Винсента Ван Гога, но и о том, какая огромная внутренняя работа, какое духовное содержание стояло за каждой картиной этого не признанного при жизни гения..." />
+                app:layout_constraintStart_toStartOf="parent"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
+
 </LinearLayout>

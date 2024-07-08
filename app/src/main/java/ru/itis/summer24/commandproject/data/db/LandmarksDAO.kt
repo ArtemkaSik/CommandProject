@@ -3,7 +3,6 @@ package ru.itis.summer24.commandproject.data.db
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
-import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
 
@@ -16,15 +15,16 @@ interface LandmarksDAO {
     @Query("""
         SELECT * FROM landmarks WHERE visit=0
     """)
-    fun getLandmarks(): LiveData<List<LandmarkEntity>>
+    fun getLandmarks(): List<Landmark>
 
     @Query("""
         SELECT * FROM landmarks WHERE id = :landmarkId
         """)
-    fun getDetails(landmarkId: Long): LiveData<Landmark>
+    fun getDetails(landmarkId: Long): Landmark
 
     @Query("""
         SELECT * FROM landmarks WHERE visit=1
         """)
-    fun getHistory(): LiveData<List<LandmarkEntity>>
+    fun getHistory(): List<Landmark>
+
 }
