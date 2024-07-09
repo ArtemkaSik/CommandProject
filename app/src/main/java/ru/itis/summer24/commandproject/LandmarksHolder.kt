@@ -8,9 +8,9 @@ import ru.itis.summer24.commandproject.databinding.ItemLandmarksBinding
 class LandmarksHolder (
         private val binding: ItemLandmarksBinding,
         private val glide: RequestManager,
-        private val onClick: (Landmarks) -> Unit
+        private val onClick: (Landmark) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun onBind(attraction: Landmarks) {
+        fun onBind(attraction: Landmark) {
             binding.apply {
                 tvName.text = attraction.name
                 tvCity.text = attraction.city

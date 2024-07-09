@@ -28,9 +28,8 @@ class LandmarksFragment : Fragment(R.layout.fragment_landmarks) {
                 val bundle = Bundle().apply {
                     putInt("landmark_id", landmark.id)
                 }
-                //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                findNavController().navigate(R.id.action_landmarksFragment_to_dostFragment, bundle) //ВМЕСТО DOST ПОМЕНЯТЬ!!!
-           //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                findNavController().navigate(R.id.action_landmarksFragment_to_detailsFragment, bundle)
+
             }
         )
 

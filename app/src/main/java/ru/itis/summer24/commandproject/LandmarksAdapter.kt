@@ -10,9 +10,9 @@ import ru.itis.summer24.commandproject.databinding.ItemLandmarksBinding
 //Этот файл отвечает за отображение списка элементов в RecyclerView.
 
 class LandmarksAdapter (
-        private var list: List<Landmarks>,
+        private var list: List<Landmark>,
         private val glide: RequestManager,
-        private val onClick: (Landmarks) -> Unit
+        private val onClick: (Landmark) -> Unit
     ) : RecyclerView.Adapter<LandmarksHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LandmarksHolder {
@@ -30,7 +30,7 @@ class LandmarksAdapter (
 
         override fun getItemCount(): Int = list.size
 
-        fun updateDataset(newList: List<Landmarks>) {
+        fun updateDataset(newList: List<Landmark>) {
             list = newList
             notifyDataSetChanged()
         }
