@@ -16,6 +16,10 @@ class NewsRepository(context: Context) {
 
     suspend fun getDetails(newsId: Long): New = newsDAO.getDetails(newsId)
 
+    suspend fun getNews(): List<New> {
+        return newsDAO.getNews()
+    }
+
     suspend fun addNews(news: NewsEntity) {
         newsDAO.add(news)
     }
