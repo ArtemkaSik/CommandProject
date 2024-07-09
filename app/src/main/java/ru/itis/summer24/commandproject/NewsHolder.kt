@@ -1,19 +1,29 @@
 package ru.itis.summer24.commandproject
 
-import androidx.appcompat.view.menu.MenuView
-import ru.itis.summer24.commandproject.databinding.ItemNewsBinding
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.bumptech.glide.Glide
+import android.content.Context
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
-import com.bumptech.glide.request.Request
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.RequestOptions
 
-class NewsHolder(
+import ru.itis.summer24.commandproject.databinding.ItemNewsBinding
+import ru.itis.summer24.commandproject.models.New
+
+class NewsHolder (
     private val binding: ItemNewsBinding,
     private val glide: RequestManager,
-    private val onClick: (News) -> Unit,
-) : ViewHolder(binding.root){
+    private val onClick: (New) -> Unit,
+) : RecyclerView.ViewHolder(binding.root) {
 
-    fun onBind(news: News){
+    private val requestOptions = RequestOptions
+        .diskCacheStrategyOf(
+            DiskCacheStrategy.ALL
+        )
+
+    private val context: Context
+        get() = itemView.context
+
+    fun onBind(news: New) {
         binding.run {
             tvNews.text = news.name
             tvDescription.text = news.description
@@ -21,12 +31,12 @@ class NewsHolder(
 
             glide
                 .load(news.url)
+                .apply(requestOptions)
                 .into(ivImage)
 
-            root.setOnClickListener{
+            root.setOnClickListener {
                 onClick.invoke(news)
             }
         }
     }
 }
-
