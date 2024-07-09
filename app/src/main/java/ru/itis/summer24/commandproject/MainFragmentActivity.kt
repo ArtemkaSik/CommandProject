@@ -13,6 +13,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import ru.itis.summer24.commandproject.data.db.LandmarksDatabase
 import ru.itis.summer24.commandproject.data.db.entities.LandmarkEntity
 
 class MainFragmentActivity : AppCompatActivity() {
@@ -44,8 +45,10 @@ class MainFragmentActivity : AppCompatActivity() {
     }
     private fun sendTable() {
         scope.launch {
-            landmarksList.forEach { landmark ->
-                database.addLandmark(landmark)
+            if (database.getLandmarks().size==0) {
+                landmarksList.forEach { landmark ->
+                    database.addLandmark(landmark)
+                }
             }
         }
     }

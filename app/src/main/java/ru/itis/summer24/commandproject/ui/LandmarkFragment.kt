@@ -2,17 +2,12 @@ package ru.itis.summer24.commandproject.ui
 
 import LandmarksRepository
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import ru.itis.summer24.commandproject.R
-import ru.itis.summer24.commandproject.data.db.LandmarksDAO
 import ru.itis.summer24.commandproject.databinding.FragmentLandmarkBinding
-import ru.itis.summer24.commandproject.models.Landmark
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

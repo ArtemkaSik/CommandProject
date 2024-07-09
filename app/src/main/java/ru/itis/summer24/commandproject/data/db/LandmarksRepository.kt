@@ -6,7 +6,7 @@ import ru.itis.summer24.commandproject.data.db.entities.LandmarkEntity
 
 class LandmarksRepository(context: Context) {
     private val db by lazy {
-            Room.databaseBuilder(context, LandmarksDatabase::class.java, "DBase")
+            Room.databaseBuilder(context, LandmarksDatabase::class.java, "LandMarksDB")
                 .allowMainThreadQueries()
                 .build()
     }

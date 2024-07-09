@@ -1,7 +1,5 @@
 package ru.itis.summer24.commandproject.models
 
-import ru.itis.summer24.commandproject.data.db.entities.LandmarkEntity
-
 data class Landmark(
     val id: Long,
     val name: String,
