@@ -10,7 +10,6 @@ import com.bumptech.glide.Glide
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import ru.itis.summer24.commandproject.models.New
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import ru.itis.summer24.commandproject.data.db.News
@@ -35,7 +34,7 @@ class BoardFragment : Fragment(R.layout.fragment_board) {
         scope.launch {
             binding?.run {
                 adapter = NewsAdapter(
-                    list = database2.getDetails(newsId),
+                    list = database2.getNews(),
                     glide = Glide.with(this@BoardFragment),
                     onClick = {
                         findNavController().navigate(
