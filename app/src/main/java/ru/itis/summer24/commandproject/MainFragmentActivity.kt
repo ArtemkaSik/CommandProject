@@ -26,6 +26,7 @@ class MainFragmentActivity : AppCompatActivity() {
 
     private var binding: ActivityFragmentMainBinding? = null
     lateinit var database: LandmarksRepository
+    lateinit var database2: NewsRepository
     private var controller: NavController? = null
     private var scope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
     val landmarksList: List<LandmarkEntity> = Landmarks.testLandmarks
