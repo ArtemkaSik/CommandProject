@@ -7,6 +7,11 @@
         android:title="@string/main"/>
 
     <item
+        android:id="@+id/boardFragment"
+        android:icon="@drawable/ic_news"
+        android:title="@string/news"/>
+
+    <item
         android:id="@+id/landmarksFragment"
         android:icon="@drawable/ic_dost"
         android:title="@string/landmarks"/>

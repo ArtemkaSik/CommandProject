@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">CommandProject</string>
     <string name="selected_item">Selected Item</string>
+    <string name="news">News</string>
     <string name="history">History</string>
     <string name="landmarks">Landmarks</string>
     <string name="all_landmarks">Landmarks</string>

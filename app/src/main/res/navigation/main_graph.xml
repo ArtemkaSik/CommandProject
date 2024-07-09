@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_mainFragment2_to_landmarksFragment"
             app:destination="@id/landmarksFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_boardFragment"
+            app:destination="@id/boardFragment" />
     </fragment>
     <fragment
         android:id="@+id/landmarksFragment"
@@ -46,4 +49,21 @@
         android:name="ru.itis.summer24.commandproject.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/boardFragment"
+        android:name="ru.itis.summer24.commandproject.BoardFragment"
+        android:label="BoardFragment" >
+        <action
+            android:id="@+id/action_boardFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="ru.itis.summer24.commandproject.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_boardFragment"
+            app:destination="@id/boardFragment" />
+    </fragment>
 </navigation>

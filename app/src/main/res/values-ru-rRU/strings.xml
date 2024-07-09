@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">CommandProject</string>
     <string name="selected_item">Выбранный язык</string>
+    <string name="news">Новости</string>
     <string name="history">История</string>
     <string name="landmarks">Список Дост.</string>
     <string name="all_landmarks">Список Достопримечательности</string>
