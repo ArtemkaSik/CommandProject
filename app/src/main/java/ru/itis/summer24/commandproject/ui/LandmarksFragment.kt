@@ -14,12 +14,15 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import ru.itis.summer24.commandproject.data.db.Landmarks
+import ru.itis.summer24.commandproject.data.db.entities.LandmarkEntity
 
 class LandmarksFragment : Fragment(R.layout.fragment_landmarks) {
     private var binding: FragmentLandmarksBinding? = null
     private var adapter: LandmarksAdapter? = null
     private lateinit var database: LandmarksRepository
     private var scope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
+    val landmarksList: List<LandmarkEntity> = Landmarks.testLandmarks
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -27,6 +30,7 @@ class LandmarksFragment : Fragment(R.layout.fragment_landmarks) {
         database = (requireActivity() as MainFragmentActivity).database
         initAdapter()
     }
+
     private fun initAdapter() {
         scope.launch {
             binding?.run {

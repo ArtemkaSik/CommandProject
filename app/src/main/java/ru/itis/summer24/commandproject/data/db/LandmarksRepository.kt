@@ -2,12 +2,12 @@ import ru.itis.summer24.commandproject.models.Landmark
 import android.content.Context
 import androidx.room.Room
 import ru.itis.summer24.commandproject.data.db.LandmarksDatabase
+import ru.itis.summer24.commandproject.data.db.entities.LandmarkEntity
 
 class LandmarksRepository(context: Context) {
     private val db by lazy {
-            Room.databaseBuilder(context, LandmarksDatabase::class.java, "DB")
+            Room.databaseBuilder(context, LandmarksDatabase::class.java, "DBase")
                 .allowMainThreadQueries()
-                .createFromAsset("lmDB.db")
                 .build()
     }
     private val landmarksDAO by lazy {
@@ -25,6 +25,13 @@ class LandmarksRepository(context: Context) {
 
     suspend fun getHistory(): List<Landmark> {
         return landmarksDAO.getHistory()
+    }
+    suspend fun updateVisit(id: Long) {
+        landmarksDAO.updateVisit(id)
+    }
+
+    suspend fun addLandmark(landmark: LandmarkEntity) {
+        landmarksDAO.add(landmark)
     }
 }
 

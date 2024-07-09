@@ -10,9 +10,4 @@ data class Landmark(
     val shortInformation: String,
     val longInformation: String,
     val visit: Int
-) {
-
-    fun toEntity() = LandmarkEntity(
-        id, name, imageUrl, city, shortInformation, longInformation, visit
-    )
-}
+)

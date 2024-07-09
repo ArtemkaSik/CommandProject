@@ -38,6 +38,14 @@ class LandmarkFragment : Fragment(R.layout.fragment_landmark) {
                         R.id.action_landmarkFragment_to_landmarksFragment
                     )
                 }
+                visit.setOnClickListener {
+                    scope.launch {
+                        database.updateVisit(landmarkId)
+                    }
+                    findNavController().navigate(
+                        R.id.action_landmarkFragment_to_landmarksFragment)
+                }
+
                 val landmark = database.getDetails(landmarkId)
                 tvName.text = landmark.name
                 tvCity.text = landmark.city
