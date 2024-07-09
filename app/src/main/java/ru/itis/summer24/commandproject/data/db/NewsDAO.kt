@@ -15,6 +15,11 @@ interface NewsDAO {
         """)
     suspend fun getDetails(newsId: Long): New
 
+    @Query("""
+        SELECT * FROM news
+    """)
+    suspend fun getNews(): List<New>
+
     @Insert
     suspend fun add(news: NewsEntity)
 
