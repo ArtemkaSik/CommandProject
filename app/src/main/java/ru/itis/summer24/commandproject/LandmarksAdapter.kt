@@ -1,13 +1,11 @@
 package ru.itis.summer24.commandproject
-
-
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
 import ru.itis.summer24.commandproject.databinding.ItemLandmarksBinding
 
-//Этот файл отвечает за отображение списка элементов в RecyclerView.
+//Этот файл отвечает за отображение списка элементов в RecyclerView
 
 class LandmarksAdapter (
         private var list: List<Landmark>,
@@ -24,13 +22,14 @@ class LandmarksAdapter (
             return LandmarksHolder(binding, glide, onClick)
         }
 
+
         override fun onBindViewHolder(holder: LandmarksHolder, position: Int) {
             holder.onBind(list[position])
         }
 
         override fun getItemCount(): Int = list.size
 
-        fun updateDataset(newList: List<Landmark>) {
+        fun updateDatase(newList: List<Landmark>) {
             list = newList
             notifyDataSetChanged()
         }
