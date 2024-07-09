@@ -21,7 +21,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import ru.itis.summer24.commandproject.data.db.LandmarksDatabase
+import ru.itis.summer24.commandproject.data.db.News
 import ru.itis.summer24.commandproject.data.db.entities.LandmarkEntity
+import ru.itis.summer24.commandproject.data.db.entities.NewsEntity
 
 class MainFragmentActivity : AppCompatActivity() {
 
@@ -31,6 +33,7 @@ class MainFragmentActivity : AppCompatActivity() {
     private var controller: NavController? = null
     private var scope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
     val landmarksList: List<LandmarkEntity> = Landmarks.testLandmarks
+    val newsList: List<NewsEntity> = News.testNews
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +51,7 @@ class MainFragmentActivity : AppCompatActivity() {
             binding?.bottomNavigation?.setupWithNavController(navController)
         }
         database = LandmarksRepository(this)
+        database2 = NewsRepository(this)
 
         (supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment)
             .navController
@@ -58,6 +62,13 @@ class MainFragmentActivity : AppCompatActivity() {
             if (database.getLandmarks().size==0) {
                 landmarksList.forEach { landmark ->
                     database.addLandmark(landmark)
+                }
+            }
+        }
+        scope.launch {
+            if (database2.getNews().size==0) {
+                newsList.forEach { new ->
+                    database2.addNews(new)
                 }
             }
         }

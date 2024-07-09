@@ -18,10 +18,8 @@ import ru.itis.summer24.commandproject.data.db.entities.NewsEntity
 class BoardFragment : Fragment(R.layout.fragment_board) {
     private var binding: FragmentBoardBinding? = null
     private var adapter: NewsAdapter? = null
-    private val newsId by lazy { arguments?.getLong(ID, 0L) ?: 0L }
     private lateinit var database2: NewsRepository
     private var scope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
-    val newsList: List<NewsEntity> = News.testNews
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
