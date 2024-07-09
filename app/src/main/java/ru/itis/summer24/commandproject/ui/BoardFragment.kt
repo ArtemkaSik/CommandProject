@@ -40,7 +40,7 @@ class BoardFragment : Fragment(R.layout.fragment_board) {
                     onClick = {
                         findNavController().navigate(
                             R.id.action_boardFragment_to_detailFragment,
-                            bundle
+                            DetailFragment.createBundle(it.id)
                         )
                     }
                 )
