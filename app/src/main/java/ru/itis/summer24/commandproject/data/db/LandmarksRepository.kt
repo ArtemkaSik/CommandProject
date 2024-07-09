@@ -5,10 +5,10 @@ import ru.itis.summer24.commandproject.data.db.LandmarksDatabase
 
 class LandmarksRepository(context: Context) {
     private val db by lazy {
-            Room.databaseBuilder(context, LandmarksDatabase::class.java, "landmarksDB")
-            .allowMainThreadQueries()
-            .createFromAsset("landmarks.db")
-            .build()
+            Room.databaseBuilder(context, LandmarksDatabase::class.java, "DB")
+                .allowMainThreadQueries()
+                .createFromAsset("lmDB.db")
+                .build()
     }
     private val landmarksDAO by lazy {
         db.getDao()
@@ -22,7 +22,6 @@ class LandmarksRepository(context: Context) {
     suspend fun getDetails(landmarkId: Long): Landmark {
         return landmarksDAO.getDetails(landmarkId)
     }
-
 
     suspend fun getHistory(): List<Landmark> {
         return landmarksDAO.getHistory()

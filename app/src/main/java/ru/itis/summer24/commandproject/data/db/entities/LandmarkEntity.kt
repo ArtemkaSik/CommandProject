@@ -6,7 +6,8 @@ import ru.itis.summer24.commandproject.models.Landmark
 
 @Entity(tableName = "landmarks")
 data class LandmarkEntity(
-    @PrimaryKey(autoGenerate = true) val id: Long,
+    @PrimaryKey(autoGenerate = true)
+    val id: Long,
     val name: String,
     val imageUrl: String,
     val city: String,

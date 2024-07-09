@@ -35,8 +35,8 @@ class LandmarksFragment : Fragment(R.layout.fragment_landmarks) {
                     glide = Glide.with(this@LandmarksFragment),
                     onClick = {
                         findNavController().navigate(
-                            R.id.action_landmarksFragment_to_detailsFragment,
-                            DetailFragment.createBundle(it.id)
+                            R.id.action_landmarksFragment_to_landmarkFragment,
+                            LandmarkFragment.createBundle(it.id)
                         )
                     }
                 )

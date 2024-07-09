@@ -37,8 +37,8 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
                     glide = Glide.with(this@HistoryFragment),
                     onClick = {
                         findNavController().navigate(
-                            resId = R.id.action_historyFragment_to_detailsFragment,
-                            args = DetailFragment.createBundle(it.id)
+                            resId = R.id.action_historyFragment_to_historylandmarkFragment,
+                            args = HistoryLandmarksFragment.createBundle(it.id)
                         )
                     }
                 )
