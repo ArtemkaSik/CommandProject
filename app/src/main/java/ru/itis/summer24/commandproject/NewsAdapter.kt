@@ -37,4 +37,4 @@ class NewsAdapter(
         list = newList
         notifyDataSetChanged()
     }
-}
+} #new
