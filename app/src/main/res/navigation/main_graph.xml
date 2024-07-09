@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="ru.itis.summer24.commandproject.MainFragment"
+        android:name="ru.itis.summer24.commandproject.ui.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" >
         <action
@@ -20,33 +20,49 @@
     </fragment>
     <fragment
         android:id="@+id/landmarksFragment"
-        android:name="ru.itis.summer24.commandproject.LandmarksFragment"
+        android:name="ru.itis.summer24.commandproject.ui.LandmarksFragment"
         android:label="fragment_landmarks"
         tools:layout="@layout/fragment_landmarks" >
         <action
-            android:id="@+id/action_landmarksFragment_to_dostFragment"
-            app:destination="@id/dostFragment" />
-        <action
             android:id="@+id/action_landmarksFragment_to_historyFragment"
             app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_landmarksFragment_to_landmarkFragment"
+            app:destination="@id/landmarkFragment" />
     </fragment>
     <fragment
-        android:id="@+id/dostFragment"
-        android:name="ru.itis.summer24.commandproject.DostFragment"
-        android:label="fragment_dost"
-        tools:layout="@layout/fragment_dost" />
+        android:id="@+id/landmarkFragment"
+        android:name="ru.itis.summer24.commandproject.ui.LandmarkFragment"
+        android:label="fragment_landmark"
+        tools:layout="@layout/fragment_landmark" >
+        <action
+            android:id="@+id/action_landmarkFragment_to_landmarksFragment"
+            app:destination="@id/landmarksFragment" />
+    </fragment>
     <fragment
         android:id="@+id/historyFragment"
-        android:name="ru.itis.summer24.commandproject.HistoryFragment"
+        android:name="ru.itis.summer24.commandproject.ui.HistoryFragment"
         android:label="fragment_history"
         tools:layout="@layout/fragment_history" >
         <action
             android:id="@+id/action_historyFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_historylandmarkFragment"
+            app:destination="@id/historylandmarkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historylandmarkFragment"
+        android:name="ru.itis.summer24.commandproject.ui.HistoryLandmarksFragment"
+        android:label="fragment_history_landmarks"
+        tools:layout="@layout/fragment_history_landmarks" >
+    <action
+        android:id="@+id/action_historylandmarkFragment_to_historyFragment"
+        app:destination="@id/historyFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="ru.itis.summer24.commandproject.SettingsFragment"
+        android:name="ru.itis.summer24.commandproject.ui.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment

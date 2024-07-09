@@ -1,4 +1,4 @@
-package ru.itis.summer24.commandproject
+package ru.itis.summer24.commandproject.ui
 
 import android.content.Context
 import android.content.res.Configuration
@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import ru.itis.summer24.commandproject.R
 import ru.itis.summer24.commandproject.databinding.FragmentSettingsBinding
 import java.util.Locale
 
