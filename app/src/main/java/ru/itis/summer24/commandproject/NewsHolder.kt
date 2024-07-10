@@ -13,6 +13,7 @@ class NewsHolder (
     private val binding: ItemNewsBinding,
     private val glide: RequestManager,
     private val onClick: (New) -> Unit,
+    private val currentLanguage: String,
 ) : RecyclerView.ViewHolder(binding.root) {
 
     private val requestOptions = RequestOptions
@@ -25,9 +26,15 @@ class NewsHolder (
 
     fun onBind(news: New) {
         binding.run {
-            tvNews.text = news.name
-            tvDescription.text = news.description
-            textView.text = news.city
+            if (currentLanguage == "en") {
+                tvNews.text = news.name
+                tvDescription.text = news.description
+            } else if (currentLanguage == "ru") {
+                tvNews.text = news.runame
+                tvDescription.text = news.rudescription
+            }
+
+            textView.text = news.date
 
             glide
                 .load(news.url)

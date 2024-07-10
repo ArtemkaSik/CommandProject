@@ -39,7 +39,8 @@ class BoardFragment : Fragment(R.layout.fragment_board) {
                             R.id.action_boardFragment_to_detailFragment,
                             DetailFragment.createBundle(it.id)
                         )
-                    }
+                    },
+                    currentLanguage = resources.configuration.locales[0].language
                 )
                 rvNews.adapter = adapter
                 rvNews.layoutManager = LinearLayoutManager(requireContext())

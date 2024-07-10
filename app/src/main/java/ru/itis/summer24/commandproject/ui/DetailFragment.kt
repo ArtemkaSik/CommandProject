@@ -32,9 +32,20 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
                     )
                 }
                 val news = database2.getDetails(newsId)
-                detailTitleTextView.text = news.name
-                detailDesTextView.text = news.description
-                detailCityTextView.text = news.city
+                // Получаем текущий язык приложения
+                val currentLocale = resources.configuration.locales[0]
+                val currentLanguage = currentLocale.language
+
+                // Устанавливаем текст в зависимости от языка
+                if (currentLanguage == "en") {
+                    detailTitleTextView.text = news.name
+                    detailDesTextView.text = news.description
+                } else if (currentLanguage == "ru") {
+                    detailTitleTextView.text = news.runame
+                    detailDesTextView.text = news.rudescription
+                }
+
+                detailCityTextView.text = news.date
                 Glide.with(view)
                     .load(news.url)
                     .into(detailImageView)

@@ -11,6 +11,7 @@ class NewsAdapter(
     private var list: List<New>,
     private val glide: RequestManager,
     private val onClick: (New) -> Unit,
+    private val currentLanguage: String,
 ) : RecyclerView.Adapter<NewsHolder>() {
 
 
@@ -25,6 +26,7 @@ class NewsAdapter(
         ),
         glide = glide,
         onClick = onClick,
+        currentLanguage = currentLanguage,
     )
 
     override fun onBindViewHolder(holder: NewsHolder, position: Int) {
