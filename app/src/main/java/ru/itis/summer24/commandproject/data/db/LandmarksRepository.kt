@@ -18,6 +18,9 @@ class LandmarksRepository(context: Context) {
         return landmarksDAO.getLandmarks()
         }
 
+    suspend fun searchItems(string: String): List<Landmark> {
+        return landmarksDAO.searchItems(string)
+    }
 
     suspend fun getDetails(landmarkId: Long): Landmark {
         return landmarksDAO.getDetails(landmarkId)

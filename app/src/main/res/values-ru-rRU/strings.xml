@@ -4,8 +4,7 @@
     <string name="selected_item">Выбранный язык</string>
     <string name="news">Новости</string>
     <string name="history">История</string>
-    <string name="landmarks">Список Дост.</string>
-    <string name="all_landmarks">Список Достопримечательности</string>
+    <string name="landmarks">Достопримечательности</string>
     <string name="main">Главный Экран</string>
     <string name="setting">Настройки</string>
     <string name="dark_theme">Тёмная тема</string>

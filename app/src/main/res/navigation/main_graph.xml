@@ -29,6 +29,21 @@
         <action
             android:id="@+id/action_landmarksFragment_to_landmarkFragment"
             app:destination="@id/landmarkFragment" />
+        <action
+            android:id="@+id/action_landmarksFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="ru.itis.summer24.commandproject.ui.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_landmarksFragment"
+            app:destination="@id/landmarksFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_landmarkFragment"
+            app:destination="@id/landmarkFragment" />
     </fragment>
     <fragment
         android:id="@+id/landmarkFragment"
