@@ -11,6 +11,7 @@ class LandmarksAdapter(
     private var list: List<Landmark>,
     private val glide: RequestManager,
     private val onClick: (Landmark) -> Unit,
+    private val currentLanguage: String,
 ) : RecyclerView.Adapter<LandmarksHolder>() {
 
 
@@ -25,6 +26,7 @@ class LandmarksAdapter(
         ),
         glide = glide,
         onClick = onClick,
+        currentLanguage = currentLanguage,
     )
 
     override fun onBindViewHolder(holder: LandmarksHolder, position: Int) {

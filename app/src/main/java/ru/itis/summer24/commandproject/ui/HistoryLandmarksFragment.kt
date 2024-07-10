@@ -39,9 +39,19 @@ class HistoryLandmarksFragment : Fragment(R.layout.fragment_history_landmarks) {
                     )
                 }
                 val landmark = database.getDetails(landmarkId)
-                tvName.text = landmark.name
-                tvCity.text = landmark.city
-                tvLongInformation.text = landmark.longInformation
+                val currentLocale = resources.configuration.locales[0]
+                val currentLanguage = currentLocale.language
+
+                if (currentLanguage == "en") {
+                    tvName.text = landmark.name
+                    tvCity.text = landmark.city
+                    tvLongInformation.text = landmark.longInformation
+                } else if(currentLanguage == "ru"){
+                    tvName.text = landmark.runame
+                    tvCity.text = landmark.rucity
+                    tvLongInformation.text = landmark.rulongInformation
+                }
+
                 Glide.with(view)
                     .load(landmark.imageUrl)
                     .into(ivLandmark)

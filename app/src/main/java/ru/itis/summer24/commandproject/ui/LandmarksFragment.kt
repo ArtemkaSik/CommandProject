@@ -56,7 +56,8 @@ class LandmarksFragment : Fragment(R.layout.fragment_landmarks) {
                             R.id.action_landmarksFragment_to_landmarkFragment,
                             LandmarkFragment.createBundle(it.id)
                         )
-                    }
+                    },
+                    currentLanguage = resources.configuration.locales[0].language
                 )
                 rvLandmarks.adapter = adapter
                 rvLandmarks.layoutManager = LinearLayoutManager(requireContext())

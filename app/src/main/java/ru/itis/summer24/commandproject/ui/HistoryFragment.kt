@@ -40,7 +40,8 @@ class HistoryFragment : Fragment(R.layout.fragment_history) {
                             resId = R.id.action_historyFragment_to_historylandmarkFragment,
                             args = HistoryLandmarksFragment.createBundle(it.id)
                         )
-                    }
+                    },
+                    currentLanguage = resources.configuration.locales[0].language
                 )
                 rvHistory.adapter = adapter
                 rvHistory.layoutManager = LinearLayoutManager(requireContext())

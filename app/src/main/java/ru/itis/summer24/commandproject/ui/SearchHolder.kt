@@ -12,6 +12,7 @@ class SearchHolder (
     private val binding: ItemLandmarkBinding,
     private val glide: RequestManager,
     private val onClick: (Landmark) -> Unit,
+    private val currentLanguage: String,
 ) : RecyclerView.ViewHolder(binding.root) {
 
     private val requestOptions = RequestOptions
@@ -24,9 +25,15 @@ class SearchHolder (
 
     fun onBind(landmark: Landmark) {
         binding.run {
-            tvName.text = landmark.name
-            tvCity.text = landmark.city
-            tvShortInformation.text = landmark.shortInformation
+            if (currentLanguage == "en") {
+                tvName.text = landmark.name
+                tvCity.text = landmark.city
+                tvShortInformation.text = landmark.shortInformation
+            } else if(currentLanguage == "ru"){
+                tvName.text = landmark.runame
+                tvCity.text = landmark.rucity
+                tvShortInformation.text = landmark.rushortInformation
+            }
 
             glide
                 .load(landmark.imageUrl)

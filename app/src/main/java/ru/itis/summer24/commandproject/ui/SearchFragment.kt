@@ -51,7 +51,8 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                             R.id.action_searchFragment_to_landmarkFragment,
                             LandmarkFragment.createBundle(it.id)
                         )
-                    }
+                    },
+                    currentLanguage = resources.configuration.locales[0].language
                 )
                 rvSearch.adapter = adapter
                 rvSearch.layoutManager = LinearLayoutManager(requireContext())
