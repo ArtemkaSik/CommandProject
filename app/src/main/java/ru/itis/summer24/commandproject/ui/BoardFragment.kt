@@ -12,8 +12,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
-import ru.itis.summer24.commandproject.data.db.News
-import ru.itis.summer24.commandproject.data.db.entities.NewsEntity
 
 class BoardFragment : Fragment(R.layout.fragment_board) {
     private var binding: FragmentBoardBinding? = null

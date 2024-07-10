@@ -7,8 +7,17 @@ plugins {
 android {
     namespace = "ru.itis.summer24.commandproject"
     compileSdk = 34
+    // ... (compileSdkVersion, buildToolsVersion, etc)
 
     defaultConfig {
+
+        // ... (applicationId, miSdkVersion, etc)
+
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas")
+            }
+        }
         applicationId = "ru.itis.summer24.commandproject"
         minSdk = 24
         targetSdk = 34
@@ -43,6 +52,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    // ... (buildTypes, compileOptions, etc)
 }
 
 dependencies {
