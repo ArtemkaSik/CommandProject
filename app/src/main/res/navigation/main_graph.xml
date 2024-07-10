@@ -3,21 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/boardFragment">
 
 
-    <fragment
-        android:id="@+id/mainFragment"
-        android:name="ru.itis.summer24.commandproject.ui.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
-        <action
-            android:id="@+id/action_mainFragment2_to_landmarksFragment"
-            app:destination="@id/landmarksFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_boardFragment"
-            app:destination="@id/boardFragment" />
-    </fragment>
     <fragment
         android:id="@+id/landmarksFragment"
         android:name="ru.itis.summer24.commandproject.ui.LandmarksFragment"
