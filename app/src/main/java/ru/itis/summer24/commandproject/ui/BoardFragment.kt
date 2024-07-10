@@ -59,5 +59,4 @@ class BoardFragment : Fragment(R.layout.fragment_board) {
             return Bundle().apply { putLong(ID, id) }
         }
     }
-
 }
