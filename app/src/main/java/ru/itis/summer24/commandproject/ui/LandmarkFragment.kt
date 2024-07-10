@@ -60,7 +60,7 @@ class LandmarkFragment : Fragment(R.layout.fragment_landmark) {
     companion object {
         private const val ID = "ID"
 
-        fun createBundle(id: Long): Bundle {
+        fun idBundle(id: Long): Bundle {
             return Bundle().apply { putLong(ID, id) }
         }
     }

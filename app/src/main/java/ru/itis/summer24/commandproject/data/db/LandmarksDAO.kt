@@ -15,6 +15,9 @@ interface LandmarksDAO {
     """)
     suspend fun getLandmarks(): List<Landmark>
 
+    @Query("SELECT * FROM landmarks WHERE LOWER(name) LIKE '%' || LOWER(:searchQuery) || '%' OR LOWER(longInformation) LIKE '%' || LOWER(:searchQuery) || '%' OR LOWER(city) LIKE '%' || LOWER(:searchQuery) || '%'")
+    fun searchItems(searchQuery: String): List<Landmark>
+
     @Query("""
         SELECT * FROM landmarks WHERE id = :landmarkId
         """)

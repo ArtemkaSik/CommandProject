@@ -4,42 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.LandmarksFragment">
+    tools:context=".ui.SearchFragment">
 
     <FrameLayout
-        android:id="@+id/frameLayout2"
+        android:id="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightGray"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="8dp">
-
-        <EditText
-            android:id="@+id/tvSearch"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@drawable/bg_search"
-            android:drawableEnd="@drawable/ic_search"
-            android:drawableTint="@color/gray"
-            android:hint="Search"
-            android:imeOptions="actionSearch"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="4dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/ic_menu_revert" />
+        <TextView
+            android:id="@+id/search_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableStart="@drawable/ic_search"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
             android:inputType="text"
-            android:maxLength="100"
-            android:maxLines="1"
-            android:paddingHorizontal="12dp" />
+            android:backgroundTint="@color/white"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Search" />
     </FrameLayout>
-
-    <TextView
-        android:id="@+id/titleLandmarks"
-        style="@style/AppTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Landmarks"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
-        app:layout_constraintVertical_bias="0.02" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -49,11 +42,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titleLandmarks"
+        app:layout_constraintTop_toBottomOf="@id/top"
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvLandmarks"
+            android:id="@+id/rvSearch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingBottom="140dp"
