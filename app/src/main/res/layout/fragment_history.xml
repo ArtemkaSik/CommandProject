@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/Primary"
         app:layout_constraintBottom_toTopOf="@id/titleHistory"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:fontFamily="@font/anton_sc_regular" />
 
     <androidx.appcompat.widget.LinearLayoutCompat

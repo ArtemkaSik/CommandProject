@@ -41,7 +41,7 @@
             android:backgroundTint="@color/Accent"
             android:drawableStart="@drawable/ic_search"
             android:inputType="text"
-            android:text=" Search"
+            android:text="@string/search"
             android:textAllCaps="false"
             android:textColor="@color/PrimaryText"
             android:fontFamily="sans-serif-condensed-medium"

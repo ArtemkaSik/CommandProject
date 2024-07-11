@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/Primary"
-        android:textSize="40dp"
+        android:textSize="32sp"
         android:fontFamily="@font/anton_sc_regular"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
