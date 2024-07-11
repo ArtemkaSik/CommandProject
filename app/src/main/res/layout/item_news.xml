@@ -5,12 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
     android:layout_marginHorizontal="16dp"
-    android:background="@color/white"
-    app:cardBackgroundColor="#FAFAFA"
     app:cardCornerRadius="16dp"
-    app:cardElevation="8dp">
+    app:cardElevation="4dp"
+    android:backgroundTint="@color/NewsItem">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,14 +26,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/icon_1" />
+            tools:src="@drawable/icon_1"
+            />
 
         <TextView
             android:id="@+id/tvNews"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:fontFamily="sans-serif-medium"
             android:paddingTop="24dp"
+            android:fontFamily="sans-serif-condensed-medium"
             android:textSize="16sp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="54dp"
@@ -44,35 +45,39 @@
             app:layout_constraintTop_toTopOf="parent"
             android:ellipsize="end"
             android:maxLines="1"
-            tools:text="The First News. My cat little/" />
+            android:textColor="@color/PrimaryText"
+            tools:text="The First News. My cat little" />
 
         <TextView
             android:id="@+id/tvDescription"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="54dp"
             android:layout_marginLeft="16dp"
-            android:paddingBottom="16dp"
+            android:layout_marginRight="54dp"
+            android:ellipsize="end"
             android:fontFamily="sans-serif-condensed-medium"
+            android:maxLines="2"
             android:paddingTop="20dp"
+            android:paddingBottom="16dp"
+            android:textColor="@color/SecText"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.228"
             app:layout_constraintLeft_toRightOf="@id/ivImage"
             app:layout_constraintStart_toEndOf="@+id/ivImage"
             app:layout_constraintTop_toBottomOf="@id/tvNews"
-            tools:text="The first news is a very interesting story. I love my cat. My cat is a very look."
-            android:ellipsize="end"
-            android:maxLines="2"/>
+            tools:text="The first news is a very interesting story. I love my cat. My cat is a very look." />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
-
+            android:textColor="@color/SecText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="sans-serif-condensed-medium"
             tools:text="City" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

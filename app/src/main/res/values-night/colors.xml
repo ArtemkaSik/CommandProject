@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#000000</color>
+    <color name="BotMen">#00121116</color>
+    <color name="NewsItem">#2C2E3E</color>
+    <color name="black">#FFFFFF</color>
+    <color name="PrimaryText">#FFFFFF</color>
+    <color name="SecText">#C8C8C8</color>
+    <color name="bt_press">#17192A</color>
+</resources>

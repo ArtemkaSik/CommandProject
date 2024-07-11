@@ -4,4 +4,13 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#4C4A4A</color>
     <color name="lightGray">#D2CECE</color>
+    <color name="Primary">#5F6FC7</color>
+    <color name="DarkPrimary">#303F9F</color>
+    <color name="Accent">#94D1CB</color>
+    <color name="BotMen">#00FDF6FE</color>
+    <color name="PrimaryText">#212121</color>
+    <color name="SecText">#757575</color>
+    <color name="NewsItem">#EBEEFF</color>
+    <color name="blackWhite">#000000</color>
+    <color name="bt_press">#D8DDF8</color>
 </resources>

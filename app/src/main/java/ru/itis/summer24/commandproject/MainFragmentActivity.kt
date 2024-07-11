@@ -6,6 +6,7 @@ import android.content.res.Resources
 import LandmarksRepository
 import NewsRepository
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.NavController
@@ -35,7 +36,6 @@ class MainFragmentActivity : AppCompatActivity() {
     val landmarksList: List<LandmarkEntity> = Landmarks.testLandmarks
     val newsList: List<NewsEntity> = News.testNews
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         applySavedTheme()
         applySavedLanguage()
@@ -56,17 +56,38 @@ class MainFragmentActivity : AppCompatActivity() {
         (supportFragmentManager.findFragmentById(R.id.container) as NavHostFragment)
             .navController
         sendTable()
+
+        hideSystemUI()
     }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus) {
+            hideSystemUI()
+        }
+    }
+
+    private fun hideSystemUI() {
+        window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_FULLSCREEN
+                        or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                        or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                )
+    }
+
     private fun sendTable() {
         scope.launch {
-            if (database.getLandmarks().size==0) {
+            if (database.getLandmarks().isEmpty()) {
                 landmarksList.forEach { landmark ->
                     database.addLandmark(landmark)
                 }
             }
         }
         scope.launch {
-            if (database2.getNews().size==0) {
+            if (database2.getNews().isEmpty()) {
                 newsList.forEach { new ->
                     database2.addNews(new)
                 }
@@ -108,5 +129,4 @@ class MainFragmentActivity : AppCompatActivity() {
         super.onDestroy()
         binding = null
     }
-
 }

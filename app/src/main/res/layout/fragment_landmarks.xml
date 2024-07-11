@@ -10,7 +10,7 @@
         android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightGray"
+        android:background="@color/DarkPrimary"
         android:paddingHorizontal="16dp"
         android:paddingVertical="8dp">
 
@@ -18,9 +18,9 @@
             android:id="@+id/tvSearch"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@drawable/bg_search"
-            android:drawableEnd="@drawable/ic_search"
-            android:drawableTint="@color/gray"
+            android:background="@drawable/bg_pressed"
+            android:drawableEnd="@drawable/baseline_search_24"
+            android:drawableTint="@color/PrimaryText"
             android:hint="@string/search"
             android:imeOptions="actionSearch"
             android:inputType="text"
@@ -31,15 +31,18 @@
 
     <TextView
         android:id="@+id/titleLandmarks"
-        style="@style/AppTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/landmarks"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
-        app:layout_constraintVertical_bias="0.02" />
+        android:text="@string/landmarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:gravity="center"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/Primary"
+        android:textSize="40dp"
+        android:fontFamily="@font/anton_sc_regular"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -56,7 +59,7 @@
             android:id="@+id/rvLandmarks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="140dp"
+            android:layout_marginBottom="104dp"
             tools:itemCount="7"
             tools:listitem="@layout/item_landmark" />
 

@@ -8,32 +8,46 @@
 
     <TextView
         android:id="@+id/settings"
-        style="@style/AppTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/setting"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/settings"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/Primary"
+        app:layout_constraintBottom_toTopOf="@id/switch_theme"
+        android:textSize="40sp"
+        android:fontFamily="@font/anton_sc_regular" />
 
     <Switch
+        android:fontFamily="sans-serif-condensed-medium"
         android:id="@+id/switch_theme"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/dark_theme"
+        android:gravity="center"
         android:textSize="24sp"
+        android:background="@drawable/bg_pressed"
+        android:textColor="@color/PrimaryText"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="64dp"
         app:layout_constraintTop_toBottomOf="@+id/settings" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/select_language"
         android:textSize="24sp"
+        android:background="@drawable/bg_pressed"
+        android:textColor="@color/PrimaryText"
+        android:layout_marginHorizontal="64dp"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,9 +55,13 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbarSize="24sp"
+        android:background="@drawable/bg_pressed"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />

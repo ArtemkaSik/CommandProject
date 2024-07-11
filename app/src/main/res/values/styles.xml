@@ -5,4 +5,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
     </style>
+    <style name="BottomNavigationViewIconSize" parent="Widget.Design.BottomNavigationView">
+        <item name="itemIconSize">32dp</item> <!-- Change this size as needed -->
+    </style>
 </resources>
